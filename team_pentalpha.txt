@@ -1,0 +1,81 @@
+﻿CODE REVIEW
+EXERCISE 17
+TEAM PENT ALPHA
+
+
+
+
+Suggestions:
+
+
+* Import statement format
+Separate imports into lines for clarity
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/main.py#L2
+
+
+* Unnecessary Code in Try Block
+Avoid putting non-error-prone code in try blocks. This is acceptable but could be better structured as:
+if not menu_choice.isdigit():
+    print("Invalid input. Please enter a number.")
+    input("Press any key to continue...")
+    continue
+menu_choice = int(menu_choice)
+
+
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/main.py#L15
+
+
+
+
+Needs to Improve:
+
+
+* Incorrect match Usage in change_mode()
+        Issue: choice is an int, but cases are strings '1', '2', etc.
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L47
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L48
+
+
+* Bad import style
+As per in guideline: "Avoid multiple imports on the same line", "Put imports in separate lines"
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L2
+
+
+* Undescriptive Variable
+choice is acceptable, but better if it's more specific like menu_choice
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L90
+* Magic Values in Accelerate
+
+
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L29
+
+
+* Incorrect Method to Check .isalpha
+Issue: new_nationality.isalpha is a function, not a function call.
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L76 
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L77
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/banzali.py#L78
+
+
+* Missing Guard Clauses
+In functions like change_name() or change_types(), a guard clause could help:
+Instead of nesting, return early on failure. Your code already does this, so ✔ good job!
+
+
+* No Constants for Menu Choices
+You use magic numbers like 1, 2, 3... in process_choice().
+
+
+* Minor Guideline Violations
+Space after equals sign (in new_temp= float(new_temp)):
+Issue: Add spaces in between operand, operator, and equals
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/espinola.py#L15
+
+
+* Random Elements Without Count
+The number of elements is random, which is fine, but for clarity and consistency, you might:
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/managbanag.py#L55
+
+
+* isalpha() May Reject Valid Input
+https://github.com/PUP-BSIT/exercise-15-pentalpha/blob/a59386e26d2a1861cfe219a26098fdbff336973a/pentalpha/raymundo.py#L36

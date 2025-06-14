@@ -1,0 +1,53 @@
+﻿CODE REVIEW
+EXERCISE 17
+TEAM POLYTECH
+
+
+
+
+Not Following the Guidelines: 
+* Exceeding 80 columns
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/raquem.py#L199
+●         Keep indentation of a function for a maximum of 3rd level. 
+●         Keep your code structure as flat as possible. 
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/capilitan.py#L52 
+
+
+What Follows the Guidelines
+
+
+* Class Name - Uses of pascal cases
+* Function Naming 
+* Descriptive Function Names
+* Menu logic is well modularized
+
+
+
+
+
+
+
+
+Improvements
+
+
+* Empty string parameters in class constructors
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/main.py#L46 
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/main.py#L49 
+
+
+* Menu Input: Strip User Input
+Fix: Prevent trailing/leading whitespace issues
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/niones.py#L71
+
+
+
+
+* Correctly ordered, separated. But consider spacing between standard and third-party.
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/raquem.py#L3
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/raquem.py#L4
+
+
+* Variable Naming: Improve Context Clarity.
+* Add Error Handling for Empty Profile Input
+https://github.com/PUP-BSIT/exercise-15-polytech/blob/7078dd703807227ced4ee60925370504bb792b99/polytech/capilitan.py#L86
